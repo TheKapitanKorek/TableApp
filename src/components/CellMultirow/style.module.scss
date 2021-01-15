@@ -32,6 +32,7 @@
   @include gradient;
 }
 .header {
+  margin-top: 1.5vh;
   margin-left: $inner_space_left;
   display: flex;
   align-items: center;
@@ -58,7 +59,6 @@
   width: $button_small;
   margin-right: 2vw;
   margin-left: 1vw;
-  margin-top: 0.5vh;
 }
 .and {
   @include prefix;

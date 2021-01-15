@@ -23,7 +23,12 @@ const Popup:FunctionComponent<props> = ({onSubmit,onCancel})=>{
         >
             <label htmlFor="name">please specify your category name: </label>
             <input id="name" type="text" onChange={(e)=>{setTitle(e.target.value)}} value={title} required/>
-            <button type="submit">+</button>
+            <button type="submit" className={style.plus}>
+            
+                <div></div>
+                <div></div>
+            
+            </button>
         </form>
     </div>
 }

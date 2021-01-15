@@ -11,6 +11,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(0.4vw + 9px);
+  letter-spacing: 0.5px;
 }
 .logo {
   background-image: url("../../assets/Logo.png");
@@ -30,6 +31,10 @@
   padding: 5vh;
   box-shadow: 1px 1px 10px 10px $blue_shadow;
   margin-bottom: 15vh;
+  @media screen and (max-width: 500px) {
+    padding: 3vw;
+    width: 90vw;
+  }
 }
 .people {
   width: calc(2 * #{$space_left});
