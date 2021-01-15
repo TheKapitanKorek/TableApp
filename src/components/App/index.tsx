@@ -15,14 +15,20 @@ const App:React.FunctionComponent = ()=>{
 
     const [cells,setCells] = useState(startingState);
     const [popup,setPopup] = useState(false);
+    const [id,setId] = useState(-1);
     
     const deleteCell = (id:number)=>{
         setCells(cells.filter(el=>el.id!==id));
     }
 
     const addCell = (title:string)=>{
+        if(cells.length>1){
         const highestId = cells.sort((a,b)=>b.id-a.id)[0].id;
         setCells([...cells,{id:highestId+1,title:title, type:"simple"}]);
+        }
+        else{
+            setCells([{id:1,title:title,type:"simple"}]);
+        }
     }
 
     const deleteInnerCell = (id:number)=>{
@@ -36,23 +42,12 @@ const App:React.FunctionComponent = ()=>{
         })
     }
 
-    const addInnerCell = (id:number)=>{
-        return(title:string)=>{
+    const addInnerCell = (id:number,title:string)=>{
             const cellIndex = cells.findIndex(el=>el.id===id);
             const highestId = cells[cellIndex].rows!.sort((a,b)=>{return (b.id-a.id)})[0].id;
-            console.log(highestId);
             const newCells = [...cells]
             newCells[cellIndex].rows!.push({id:highestId+1,title:title});
             setCells(newCells);
-        }  
-    }
-
-    const openAddInner = ()=>{
-
-    }
-
-    const openAdd = ()=>{
-
     }
 
     const renderConctent = ()=>{
@@ -62,7 +57,10 @@ const App:React.FunctionComponent = ()=>{
             }else if(el.type==="multirow"
             ){
                 return(<Multirow 
-                onClickAdd={addInnerCell(el.id)}
+                onClickAdd={()=>{
+                    setId(el.id);
+                    setPopup(true);
+                }}
                 onClickDeleteAll={()=>{
                     deleteCell(el.id);
                 }}
@@ -72,16 +70,17 @@ const App:React.FunctionComponent = ()=>{
                 />
                 )
             }
-        })
+            else{
+                return undefined;
+            }
+        }
+        )
         return markups;
     }
 
     return (
     <div className={style.background}>
-        <div className={style.logo_box}>
-            <div className={style.logo}/>
-            <div className={style.header}/>
-        </div>
+        <div className={style.logo}/>
     <div className={style.appbox}>   
         <div className={style.people}>
             People
@@ -90,10 +89,18 @@ const App:React.FunctionComponent = ()=>{
             {renderConctent()}
         </div>  
         <div className={style.buttonbox}>
-            <ButtonPlusBig onClick={()=>{console.log("hello")}}/>
+            <ButtonPlusBig onClick={()=>{setPopup(true)}}/>
         </div>
     </div>
-    {popup?<Popup onClose={()=>{console.log("hey")}} onSubmit={()=>{console.log("hello")}}/>:null}
+    {popup?<Popup onSubmit={(title:string)=>{
+        if(id>-1){
+            addInnerCell(id,title);
+        }else{
+            addCell(title);
+        }
+        setId(-1);
+        setPopup(false);
+    }}/>:null}
     </div>)
 }  
 

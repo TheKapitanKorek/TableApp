@@ -22,10 +22,14 @@
   box-shadow: 2px 2px 7px 5px $blue_shadow;
   border-radius: $border_radius;
 }
-@mixin and {
+@mixin prefix {
   color: $gray;
   position: absolute;
-  left: calc(-#{$space_left}/ 2);
+  transform: translateX(-100%);
+  padding-right: 1em;
+  @media screen and (max-width: 400px) {
+    padding-right: 0.5em;
+  }
 }
 @mixin gradient {
   position: absolute;

@@ -90,6 +90,7 @@ video {
   border: 0;
   font: inherit;
   vertical-align: baseline;
+  font-size: calc(0.4vw + 9px);
 }
 /* HTML5 display-role reset for older browsers */
 article,

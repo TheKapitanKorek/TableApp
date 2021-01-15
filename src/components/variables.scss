@@ -12,8 +12,8 @@ $border_radius: 5px;
 
 //SPACING
 $space_left: 6vw;
-$inner_space_left: 2vw;
-$line_width: 10vh;
+$inner_space_left: 3vw;
+$line_width: calc(2vw + 4vh);
 
 //BUTTON SIZES
 $button_small: 3vh;

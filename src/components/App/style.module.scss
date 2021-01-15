@@ -6,34 +6,24 @@
   background-repeat: no-repeat;
   background-size: cover;
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-}
-.logo_box {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-  height: 20vh;
-  width: 30vh;
-  margin-bottom: 2vh;
+  font-size: calc(0.4vw + 9px);
+  overflow-x: hidden;
+  overflow-y: scroll;
 }
 .logo {
-  background-image: url("../../assets/Header.png");
-  background-repeat: no-repeat;
-  background-size: contain;
-  height: 8vh;
-  width: 8vh;
-}
-.header {
   background-image: url("../../assets/Logo.png");
   background-repeat: no-repeat;
   background-size: contain;
-  height: 8vh;
-  width: 100%;
+  background-position: center;
+  height: 20vh;
+  width: 40vw;
+  max-width: 400px;
+  margin-bottom: 5vh;
 }
 .appbox {
   background-color: white;

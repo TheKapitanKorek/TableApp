@@ -19,8 +19,8 @@ interface cellProps{
 const Cell:React.FunctionComponent<cellProps> = ({onClickDelete,title})=>{
     return (
         <div className={style.row_cell}>
-            <div className={style.or}>Or</div>
-                <div className={style.lineBox}>
+            <div className={style.and}>Or</div>
+                <div className={style.innerLineBox}>
                     <div className={style.line}/>
                 </div> 
             <div className={style.textbox}>

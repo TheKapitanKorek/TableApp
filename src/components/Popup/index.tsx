@@ -1,17 +1,22 @@
-import React,{FunctionComponent} from 'react';
+import React,{FunctionComponent,useState} from 'react';
 import style from './style.module.scss';
 
 interface props {
-    onClose: Function,
-    onSubmit: Function
+    onSubmit: Function;
 }
 
-const Popup:FunctionComponent<props> = ({onSubmit,onClose})=>{
+const Popup:FunctionComponent<props> = ({onSubmit})=>{
+
+    const [title,setTitle] = useState("");
+
     return<div className={style.overlay}>
-        <form className={style.form}>
+        <form className={style.form} onSubmit={(e)=>{
+            e.preventDefault();
+            onSubmit(title);
+        }}>
             <label htmlFor="name">please specify your category name: </label>
-            <input id="name" type="text"/>
-            <button type="submit">OK</button>
+            <input id="name" type="text" onChange={(e)=>{setTitle(e.target.value)}} value={title}/>
+            <button type="submit">+</button>
         </form>
     </div>
 }

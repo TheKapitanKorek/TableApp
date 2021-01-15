@@ -25,6 +25,9 @@
   margin-left: 2vw;
   color: $text_color;
   font-weight: 900;
+  @media screen and (max-width: 700px) {
+    margin-left: 4vw;
+  }
 }
 
 .buttonbox {
@@ -33,5 +36,5 @@
   margin-right: 2vw;
 }
 .and {
-  @include and;
+  @include prefix;
 }

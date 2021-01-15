@@ -10,17 +10,34 @@
 .form {
   position: relative;
   top: 40vh;
-  left: 20vw;
-  width: 50vw;
+  left: 40vw;
+  width: 20vw;
   height: 20vh;
-  background: linear-gradient(45deg, $green_top, $green_bot);
-  //box-shadow: 1px 1px 10px 5px $blue_shadow;
+  background-image: url("../../assets/background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  box-shadow: 1px 1px 10px 5px $text_color;
   border-radius: $border_radius;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-wrap: nowrap;
+  @media screen and (max-width: 1000px) {
+    width: 40vw;
+    left: 30vw;
+  }
+
+  @media screen and (max-width: 500px) {
+    width: 60vw;
+    left: 20vw;
+  }
+  @media screen and (max-width: 3000px) {
+    width: 80vw;
+    left: 10vw;
+  }
   label {
+    width: 90%;
     color: $text_color;
     font-weight: 900;
     text-align: center;
@@ -33,6 +50,7 @@
     font-weight: 700;
     border-radius: $border_radius;
     height: 4vh;
+    width: 90%;
     line-height: 4vh;
     margin: 0 1vw;
   }
@@ -44,6 +62,6 @@
     border-radius: 100%;
     width: 5vh;
     height: 5vh;
-    margin: 0 2vw;
+    text-align: center;
   }
 }

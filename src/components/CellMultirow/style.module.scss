@@ -16,6 +16,10 @@
 .lineBox {
   @include linebox;
 }
+.innerLineBox {
+  @include linebox;
+  width: 5%;
+}
 .line {
   @include line;
 }
@@ -31,15 +35,17 @@
   margin-left: $inner_space_left;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  width: 90%;
+  @media screen and (max-width: 700px) {
+    margin-left: 4vw;
+  }
 }
 .textbox {
   color: $text_color;
   font-weight: 900;
   text-indent: 1vw;
   margin: 1vh 0 0 0;
-  max-width: 100%;
-  width: 40vh;
+  width: 90%;
   height: 5vh;
   border: 1px solid $gray;
   border-radius: $border_radius;
@@ -55,14 +61,11 @@
   margin-top: 0.5vh;
 }
 .and {
-  @include and;
-}
-.or {
-  @include and;
-  left: calc(-#{$inner_space_left});
+  @include prefix;
 }
 .content {
-  margin-left: calc(#{$inner_space_left}* 2);
+  width: 80%;
+  margin-left: calc(#{$inner_space_left}* 3);
   padding-top: 1vh;
   padding-bottom: 2vh;
   border-left: 1px solid $gray;
@@ -70,7 +73,7 @@
   flex-direction: column;
 }
 .buttonbox_plus {
-  margin-left: calc(#{$inner_space_left}* 2 - #{$button_med}/ 2);
+  margin-left: calc(#{$inner_space_left}* 3 - #{$button_med}/ 2);
   width: $button_med;
   height: $button_med;
   transition: transform 1s;
