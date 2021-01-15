@@ -1,0 +1,67 @@
+@import "../variables.scss";
+
+.background {
+  font-family: "Roboto";
+  background-image: url("../../assets/background.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.logo_box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  height: 20vh;
+  width: 30vh;
+  margin-bottom: 2vh;
+}
+.logo {
+  background-image: url("../../assets/Header.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 8vh;
+  width: 8vh;
+}
+.header {
+  background-image: url("../../assets/Logo.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  height: 8vh;
+  width: 100%;
+}
+.appbox {
+  background-color: white;
+  border-radius: $border_radius;
+  max-width: 1200px;
+  width: 80vw;
+  padding: 5vh;
+  box-shadow: 1px 1px 10px 10px $blue_shadow;
+  margin-bottom: 2vh;
+}
+.people {
+  width: calc(2 * #{$space_left});
+  background: linear-gradient($purple 0%, $blue);
+  border-radius: $border_radius;
+  font-weight: 800;
+  color: white;
+  text-shadow: 1px 1px 1px #7264d2;
+  text-align: center;
+  line-height: 300%;
+}
+.content {
+  margin-left: $space_left;
+  border-left: 1px solid $gray;
+  padding-top: 3vh;
+}
+.buttonbox {
+  margin-left: calc(#{$space_left} - #{$button_big}/ 2);
+  width: $button_big;
+  height: $button_big;
+  transition: transform 1s;
+}

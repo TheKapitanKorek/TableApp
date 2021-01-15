@@ -1,0 +1,37 @@
+@import "../variables.scss";
+@import "../mixins.scss";
+
+.basic_cell {
+  height: 12vh;
+  border-radius: $border_radius;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+.lineBox {
+  @include linebox;
+}
+.line {
+  @include line;
+}
+.contents {
+  @include contents;
+}
+
+.gradient {
+  @include gradient;
+}
+.title {
+  margin-left: 2vw;
+  color: $text_color;
+  font-weight: 900;
+}
+
+.buttonbox {
+  height: $button_small;
+  width: $button_small;
+  margin-right: 2vw;
+}
+.and {
+  @include and;
+}

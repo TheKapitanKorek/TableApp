@@ -1,0 +1,49 @@
+@import "../variables.scss";
+
+.overlay {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 10;
+  background: rgba(155, 155, 155, 0.5);
+}
+.form {
+  position: relative;
+  top: 40vh;
+  left: 20vw;
+  width: 50vw;
+  height: 20vh;
+  background: linear-gradient(45deg, $green_top, $green_bot);
+  //box-shadow: 1px 1px 10px 5px $blue_shadow;
+  border-radius: $border_radius;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  label {
+    color: $text_color;
+    font-weight: 900;
+    text-align: center;
+    margin: 0 1vw;
+  }
+  input {
+    background: none;
+    border: 2px solid $text_color;
+    color: $text_color;
+    font-weight: 700;
+    border-radius: $border_radius;
+    height: 4vh;
+    line-height: 4vh;
+    margin: 0 1vw;
+  }
+  button {
+    background: none;
+    color: $text_color;
+    font-weight: 800;
+    border: 2px solid $text_color;
+    border-radius: 100%;
+    width: 5vh;
+    height: 5vh;
+    margin: 0 2vw;
+  }
+}

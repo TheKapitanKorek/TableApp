@@ -1,0 +1,79 @@
+@import "../variables.scss";
+@import "../mixins.scss";
+
+.multirow_cell {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.row_cell {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.lineBox {
+  @include linebox;
+}
+.line {
+  @include line;
+}
+.contents {
+  @include contents;
+  align-items: flex-start;
+  flex-direction: column;
+}
+.gradient {
+  @include gradient;
+}
+.header {
+  margin-left: $inner_space_left;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.textbox {
+  color: $text_color;
+  font-weight: 900;
+  text-indent: 1vw;
+  margin: 1vh 0 0 0;
+  max-width: 100%;
+  width: 40vh;
+  height: 5vh;
+  border: 1px solid $gray;
+  border-radius: $border_radius;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.buttonbox_minus {
+  height: $button_small;
+  width: $button_small;
+  margin-right: 2vw;
+  margin-left: 1vw;
+  margin-top: 0.5vh;
+}
+.and {
+  @include and;
+}
+.or {
+  @include and;
+  left: calc(-#{$inner_space_left});
+}
+.content {
+  margin-left: calc(#{$inner_space_left}* 2);
+  padding-top: 1vh;
+  padding-bottom: 2vh;
+  border-left: 1px solid $gray;
+  display: flex;
+  flex-direction: column;
+}
+.buttonbox_plus {
+  margin-left: calc(#{$inner_space_left}* 2 - #{$button_med}/ 2);
+  width: $button_med;
+  height: $button_med;
+  transition: transform 1s;
+  align-self: flex-start;
+  margin-bottom: 2vh;
+}
