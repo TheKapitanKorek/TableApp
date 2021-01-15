@@ -10,13 +10,13 @@ to run the app on the localhost:3000 use this command:
 
 ## About App
 
-This is a one screen app that i have built basing on a template design, as my recruitments
+This is a one screen app that i have built basing on a template design, as my recruitment test
 
 ### App Visual
 
 ![Image](app.jpg)
 
-[Check the app here] (http://TheKapitanKorek.github.io/TableApp)
+[Check the app here](http://TheKapitanKorek.github.io/TableApp)
 
 ## Technologies used:
 
