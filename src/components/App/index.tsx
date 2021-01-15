@@ -44,9 +44,13 @@ const App:React.FunctionComponent = ()=>{
 
     const addInnerCell = (id:number,title:string)=>{
             const cellIndex = cells.findIndex(el=>el.id===id);
-            const highestId = cells[cellIndex].rows!.sort((a,b)=>{return (b.id-a.id)})[0].id;
             const newCells = [...cells]
+            if(cells[cellIndex].rows!.length>0){
+            const highestId = cells[cellIndex].rows!.sort((a,b)=>{return (b.id-a.id)})[0].id;
             newCells[cellIndex].rows!.push({id:highestId+1,title:title});
+            }else{
+            newCells[cellIndex].rows!.push({id:1,title:title});
+            }
             setCells(newCells);
     }
 
@@ -100,7 +104,12 @@ const App:React.FunctionComponent = ()=>{
         }
         setId(-1);
         setPopup(false);
-    }}/>:null}
+    }}
+    onCancel={()=>{
+        setId(-1);
+        setPopup(false);
+    }}
+    />:null}
     </div>)
 }  
 

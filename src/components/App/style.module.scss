@@ -5,15 +5,12 @@
   background-image: url("../../assets/background.png");
   background-repeat: no-repeat;
   background-size: cover;
-  width: 100vw;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(0.4vw + 9px);
-  overflow-x: hidden;
-  overflow-y: scroll;
 }
 .logo {
   background-image: url("../../assets/Logo.png");
@@ -32,7 +29,7 @@
   width: 80vw;
   padding: 5vh;
   box-shadow: 1px 1px 10px 10px $blue_shadow;
-  margin-bottom: 2vh;
+  margin-bottom: 15vh;
 }
 .people {
   width: calc(2 * #{$space_left});
