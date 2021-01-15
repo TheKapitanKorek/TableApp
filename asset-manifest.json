@@ -1,21 +1,21 @@
 {
   "files": {
-    "main.css": "/tableapp/static/css/main.88c9d60f.chunk.css",
-    "main.js": "/tableapp/static/js/main.dbcaf962.chunk.js",
-    "main.js.map": "/tableapp/static/js/main.dbcaf962.chunk.js.map",
-    "runtime-main.js": "/tableapp/static/js/runtime-main.19e436a7.js",
-    "runtime-main.js.map": "/tableapp/static/js/runtime-main.19e436a7.js.map",
-    "static/js/2.e3d711ca.chunk.js": "/tableapp/static/js/2.e3d711ca.chunk.js",
-    "static/js/2.e3d711ca.chunk.js.map": "/tableapp/static/js/2.e3d711ca.chunk.js.map",
-    "index.html": "/tableapp/index.html",
-    "static/css/main.88c9d60f.chunk.css.map": "/tableapp/static/css/main.88c9d60f.chunk.css.map",
-    "static/js/2.e3d711ca.chunk.js.LICENSE.txt": "/tableapp/static/js/2.e3d711ca.chunk.js.LICENSE.txt",
-    "static/media/style.module.scss": "/tableapp/static/media/background.3a6e5af8.png"
+    "main.css": "/TableApp/static/css/main.e65dcb59.chunk.css",
+    "main.js": "/TableApp/static/js/main.dbcaf962.chunk.js",
+    "main.js.map": "/TableApp/static/js/main.dbcaf962.chunk.js.map",
+    "runtime-main.js": "/TableApp/static/js/runtime-main.a1865754.js",
+    "runtime-main.js.map": "/TableApp/static/js/runtime-main.a1865754.js.map",
+    "static/js/2.e3d711ca.chunk.js": "/TableApp/static/js/2.e3d711ca.chunk.js",
+    "static/js/2.e3d711ca.chunk.js.map": "/TableApp/static/js/2.e3d711ca.chunk.js.map",
+    "index.html": "/TableApp/index.html",
+    "static/css/main.e65dcb59.chunk.css.map": "/TableApp/static/css/main.e65dcb59.chunk.css.map",
+    "static/js/2.e3d711ca.chunk.js.LICENSE.txt": "/TableApp/static/js/2.e3d711ca.chunk.js.LICENSE.txt",
+    "static/media/style.module.scss": "/TableApp/static/media/background.3a6e5af8.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.19e436a7.js",
+    "static/js/runtime-main.a1865754.js",
     "static/js/2.e3d711ca.chunk.js",
-    "static/css/main.88c9d60f.chunk.css",
+    "static/css/main.e65dcb59.chunk.css",
     "static/js/main.dbcaf962.chunk.js"
   ]
 }
